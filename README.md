@@ -3,12 +3,10 @@ It's just simple host to host mailing api system using PHP MAILER .  It will hel
 
 However , It is dificult to send mail via SMTP server in various PaSS or cloud based hosting platform . So to send email via
 APP-->SERVER then USER END<---SERVER using SMTP server in various PaSS or cloud based hosting platform we can folow this machanism
-
+>>>How To USE:
 1) APP-->CLOUD HOST PROVIDING SERVER ( Cloud Based PaSS Plat Form i.e http://openshift.com/);
 2) CLOUD HOST PROVIDING SERVER--> SMTP SUPPORTED SERVER
 3) SMTP SUPPORTED SERVER --> USER END
-
-# HOW TO USE
 
 1) To know more about PHP Mailer See the documentation, example to use  & Clone PHP MAILER From Here https://github.com/PHPMailer/PHPMailer.git 
 
@@ -16,16 +14,17 @@ APP-->SERVER then USER END<---SERVER using SMTP server in various PaSS or cloud 
 
 3) Host it to a SMTP SUPPORTED SERVER  by setting up your own SMTP
 
+4) Then Call mailr.php from a CLOUD HOST PROVIDING SERVER
+  example: 
+  
+ <?php
+   /*
+   Forger Password Soluation;
+   */
+   $email='xxxxxxx@gmail.com'; // receiver email
+  $e =$email;          
+  $password =asnwsnwndb22;     // new password
 
-4)Then Call mailr.php from a CLOUD HOST PROVIDING SERVER .
-example: 
-
-
-<?php
-$email='xxxxxxx@gmail.com'; // senderemail
-$e =$email;          
-$password =123;     // recovery password
-
-$homepage = file_get_contents('http://www.yourdomainname.com/mailr.php?email='.$e.'&password='.$password);
+  $homepage = file_get_contents('http://www.yourdomainname.com/mailr.php?email='.$e.'&password='.$password);
 
 ?>
