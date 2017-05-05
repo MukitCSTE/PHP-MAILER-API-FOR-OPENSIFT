@@ -34,8 +34,8 @@ $mail = new PHPMailer;
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'mukitkhan07@gmail.com';                 // SMTP username
-$mail->Password = '1010879913800';                           // SMTP password
+$mail->Username = 'mukitkhan@gmail.com';                 // SMTP username
+$mail->Password = 'yourmailpassword';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port =  465; 
 $m = "nstucstean@gmail.com";                                  // TCP port to connect to
@@ -51,7 +51,7 @@ $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 $password = rand(1234556,162222222252);
-$mail->Subject = 'NEW LOGIN PASSWORD FOR NSTU ONB ';
+$mail->Subject = 'NEW LOGIN PASSWORD FOR NSTU ONB ';//your subject
 $mail->Body    = "Hi,<p></br>It seems you may have forgotten your login password at NSTU ONB.</br></p>
 <p></br> No need to worry any more.</br></p>
 <p>Your new password is : <b>{$password}</b>.</p>Use this password to login and then <b>you can change the password later</b> by your own way , so that you can able to remember it easily for further login . If you face any problem just reply to us about the problem that you have faced. Our engineers are always ready to help you.<p></br>Thank you so much for using NSTU ONB</br></p><p><br><b>A product of MAGPIE Intelligence.</b></br></p>" ;
